@@ -1,69 +1,60 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="UTF-8" />
-      <title>TEST Page</title>
-      <link rel="stylesheet" href="style.css" />
-   </head>
-   <body>
-      <form action="https://app.headlessforms.cloud/api/v1/form-submission/bxxMjx7K0B" method="POST" enctype="multipart/form-data">
-         <label for="name">Name</label>
-         <input type="text" name="name" />
-         <label for="email">Email</label>
-         <input type="email" name="realemailfield" />
+<html lang="en">
 
-         <label for="message">Message</label>
-         <textarea name="message"></textarea>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example for testing</title>
+  <script src = "./script.js" defer></script>
+  <link rel="stylesheet" href="./style.css" />
 
-         <!-- single file attachment handle -->
-         <label for="attachment">Attach a file:</label>
-         <input type="file" id="attachment" name="attachments" />
+</head>
 
-         <!-- multiple files attachment handle -->
-         <label for="attachment2">Attach multiple files:</label>
-         <input type="file" id="attachment2" name="attachments[]" multiple />
+<body>
+  <div class="loginForm">
+    <h2 id="loginForm">Login</h2>
+    <form>
+      <div class="inputbox">
+        <input id="userName" type="text"/>
+        <label>Username</label>
+      </div>
+      <div class="inputbox">
+        <input id="password" type="password" />
+        <label>Password</label>
+      </div>
+      <div class = "buttonWrapper"> 
+        <input class="button" id="submit" type="submit" value="Submit" />
+        <span>OR</span>
+        <input class="button" id="registerOnLogin" value="Register" />
+      </div>
+     
+      <h4 id="errorMessage"></h4>
+    </form>
+  </div>
+  <div class="registerForm">
+    <h2 id="registerForm">Registration</h2>
+    <form>
+      <div class="inputbox">
+        <input id="userNameOnRegister" type="text" maxlength="40"/>
+        <label>Username</label>
+      </div>
+      <div class="inputbox">
+        <input id="passwordOnRegister" type="password" maxlength="20"/>
+        <label>Password</label>
+      </div>
+      <div class = "buttonWrapper"> 
+        <input class="button" id="register" type="submit" value="Register" />        
+        <input class="button" id="backOnRegister" value="Back" />
+      </div>
+     
+      <h4 id="errorMessageOnRegister"></h4>
+    </form>
+  </div>
+  <div class="successMessage">
+    <h4 id="successMessage">Logged in!</h4>
+    <input class="button" id="backButton" value="Back to login page"></input>
+  </div>
+</body>
 
-         <!-- honeypot handle -->
-         <input type="hidden" name="email" value="" />
-
-         <!-- date handle -->
-         <label for="birthday">Birthday:</label>
-         <input type="date" id="birthday" name="birthday" />
-
-         <!-- radio button handle -->
-         <div>
-            <label>Favorite language</label><br />
-            <input type="radio" id="html" name="fav_language" value="PHP" />
-            <label for="html">PHP</label><br />
-            <input type="radio" id="css" name="fav_language" value="HTML/CSS" />
-            <label for="css">HTML/CSS</label><br />
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
-            <label for="javascript">JavaScript</label>
-         </div>
-
-         <!-- select field handle -->
-         <div>
-            <label>Favorite season</label>
-            <select name="season">
-               <option value="winter">Winter</option>
-               <option value="summer">Summer</option>
-               <option value="spring">Spring</option>
-               <option value="spring">Autumn</option>
-            </select>
-         </div>
-
-         <!-- range handle -->
-         <label for="vol">Rate us (between 1 and 10):</label>
-         <input type="range" id="vol" name="rate" min="1" max="10" />
-
-         <!-- checkbox handle -->
-         <div>
-            <input type="hidden" name="subscribe" value="no" checked />
-            <input type="checkbox" name="subscribe" value="yes" />
-            <label for="subscribe">Subscribe</label><br />
-         </div>
-
-         <button type="submit">Send</button>
-      </form>
-   </body>
 </html>
