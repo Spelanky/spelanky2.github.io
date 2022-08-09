@@ -19,8 +19,11 @@ describe('Send submission', () => {
          sent.Name().type(`${name}`);
          sent.Email().type(`${email}`);
          sent.Message().type(`${message}`);
-         //Attach files
-         sent.Attachment().selectFile('file.json');
+
+         //Attach file
+         // sent.Attachment().selectFile('file.json');
+
+         //Attach 3 files
          sent
             .Attachment2()
             .selectFile(['file.json', 'file2.json', 'file3.png']);
@@ -38,7 +41,7 @@ describe('Send submission', () => {
          //Checkbox
          cy.get('[type="checkbox"]').check();
          //Submit Form
-         sent.btnSubmit().should('be.visible');
+         sent.btnSubmit().should('be.visible').click();
       });
    });
 });
