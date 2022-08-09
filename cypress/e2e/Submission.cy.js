@@ -6,7 +6,7 @@ const base_url = 'https://spelanky.github.io/spelanky2.github.io/';
 const name = 'Mitka';
 const email = 'mymail@test.com';
 const message = 'Lorem Ipsum Message Text';
-const birthday = '04.04.1985';
+const birthday = '1985-04-04';
 
 describe('Send submission', () => {
    context('Submission', () => {
@@ -19,11 +19,25 @@ describe('Send submission', () => {
          sent.Name().type(`${name}`);
          sent.Email().type(`${email}`);
          sent.Message().type(`${message}`);
+         //Attach files
+         sent.Attachment().selectFile('file.json');
+         sent
+            .Attachment2()
+            .selectFile(['file.json', 'file2.json', 'file3.png']);
 
-         // Attach a file:
-         // Attach multiple files:
          sent.Birthday().type(`${birthday}`);
-
+         //Radio button
+         cy.get('[type="radio"]').first().should('have.value', 'PHP').check();
+         //Favorite season
+         sent.Season().select('Summer');
+         //Range
+         cy.get('input[type="range"]')
+            .as('range')
+            .invoke('val', 7)
+            .trigger('change');
+         //Checkbox
+         cy.get('[type="checkbox"]').check();
+         //Submit Form
          sent.btnSubmit().should('be.visible');
       });
    });
