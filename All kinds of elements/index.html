@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>TEST Page</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <form action="https://headless.freihandlabor.dev/api/v1/form-submission/YOjsdmftZX" method="POST" enctype="multipart/form-data">
+         <label for="name">Name</label>
+         <input type="text" name="name" />
+         <label for="email">Email</label>
+         <input type="email" name="email" />
+
+         <label for="message">Message</label>
+         <textarea name="message"></textarea>
+
+         <!-- single file attachment handle -->
+         <label for="attachment">Attach a file:</label>
+         <input type="file" id="attachment" name="attachments" />
+
+         <!-- multiple files attachment handle -->
+         <label for="attachment2">Attach multiple files:</label>
+         <input type="file" id="attachment2" name="attachments[]" multiple />
+
+         <!-- honeypot handle -->
+         <!-- <input type="hidden" name="email" value="" /> -->
+
+         <!-- date handle -->
+         <label for="birthday">Birthday:</label>
+         <input type="date" id="birthday" name="birthday" />
+
+         <!-- radio button handle -->
+         <div>
+            <label>Favorite language</label><br />
+            <input type="radio" id="html" name="fav_language" value="PHP" />
+            <label for="html">PHP</label><br />
+            <input type="radio" id="css" name="fav_language" value="HTML/CSS" />
+            <label for="css">HTML/CSS</label><br />
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+            <label for="javascript">JavaScript</label>
+         </div>
+
+         <!-- select field handle -->
+         <div>
+            <label>Favorite season</label>
+            <select name="season">
+               <option value="winter">Winter</option>
+               <option value="summer">Summer</option>
+               <option value="spring">Spring</option>
+               <option value="spring">Autumn</option>
+            </select>
+         </div>
+
+         <!-- range handle -->
+         <label for="vol">Rate us (between 1 and 10):</label>
+         <input type="range" id="vol" name="rate" min="1" max="10" />
+
+         <!-- checkbox handle -->
+         <div>
+            <input type="hidden" name="subscribe" value="no" checked />
+            <input type="checkbox" name="subscribe" value="yes" />
+            <label for="subscribe">Subscribe</label><br />
+         </div>
+
+         <button type="submit">Send</button>
+      </form>
+   </body>
+</html>
