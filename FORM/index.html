@@ -6,14 +6,18 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <form action="https://headless.freihandlabor.dev/api/v1/form-submission/YOjsdmftZX" method="POST" enctype="multipart/form-data">
+      <form
+         action="https://headless.freihandlabor.dev/api/v1/form-submission/YOjsdmftZX"
+         method="POST"
+         enctype="multipart/form-data"
+      >
          <label for="name">Name</label>
-         <input type="text" name="name" />
+         <input type="text" id="name" name="name" />
          <label for="email">Email</label>
-         <input type="email" name="email" />
+         <input type="email" id="email" name="email" />
 
          <label for="message">Message</label>
-         <textarea name="message"></textarea>
+         <textarea id="message" class="message-id" name="message"></textarea>
 
          <!-- single file attachment handle -->
          <label for="attachment">Attach a file:</label>
@@ -24,7 +28,7 @@
          <input type="file" id="attachment2" name="attachments[]" multiple />
 
          <!-- honeypot handle -->
-         <!-- <input type="hidden" name="email" value="" /> -->
+         <!-- <input id="honey" type="hidden" name="email" value="" /> -->
 
          <!-- date handle -->
          <label for="birthday">Birthday:</label>
@@ -37,7 +41,12 @@
             <label for="html">PHP</label><br />
             <input type="radio" id="css" name="fav_language" value="HTML/CSS" />
             <label for="css">HTML/CSS</label><br />
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+            <input
+               type="radio"
+               id="javascript"
+               name="fav_language"
+               value="JavaScript"
+            />
             <label for="javascript">JavaScript</label>
          </div>
 
