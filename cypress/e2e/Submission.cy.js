@@ -8,25 +8,39 @@ const email = 'mymail@test.com';
 const message = 'Lorem Ipsum Message Text';
 const birthday = '1985-04-04';
 
+function Random() {
+   let text = '';
+   let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+   for (
+      var i = 0;
+      i < 1;
+      i++ //How many chars
+   )
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+   return text;
+}
+
 describe('Send submission', () => {
    context('Submission', () => {
       const sent = new Form();
+
       it('Sent', () => {
          cy.visit(`${base_url}`);
          cy.viewport(1600, 1200);
          cy.location('protocol').should('eq', 'https:');
 
          sent.Name().type(`${name}`);
-         sent.Email().type(`${email}`);
+         // sent.Email().type(`${email}`);
+
+         sent.Email().type(`mail_${Random()} @test.com`);
+
          sent.Message().type(`${message}`);
 
-         //Attach file
-         // sent.Attachment().selectFile('file.json');
+         // Attach file
+         sent.Attachment().selectFile('file1.png');
 
          //Attach 3 files
-         sent
-            .Attachment2()
-            .selectFile(['file.json', 'file2.json', 'file3.png']);
+         sent.Attachment2().selectFile(['file1.png', 'file2.png', 'file3.png']);
 
          sent.Birthday().type(`${birthday}`);
          //Radio button
@@ -41,7 +55,7 @@ describe('Send submission', () => {
          //Checkbox
          cy.get('[type="checkbox"]').check();
          //Submit Form
-         sent.btnSubmit().should('be.visible').click();
+         sent.btnSubmit().should('be.visible');
       });
    });
 });
