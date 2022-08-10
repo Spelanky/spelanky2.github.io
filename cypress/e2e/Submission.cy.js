@@ -41,18 +41,18 @@ describe('Send submission', () => {
 
          //Attach 3 files
          sent.Attachment2().selectFile(['file1.png', 'file2.png', 'file3.png']);
-
+         //Date field
          sent.Birthday().type(`${birthday}`);
-         //Radio button
+         //Radio button check
          cy.get('[type="radio"]').first().should('have.value', 'PHP').check();
-         //Favorite season
+         //Selector Favourite season
          sent.Season().select('Summer');
-         //Range
+         //Range setting
          cy.get('input[type="range"]')
             .as('range')
             .invoke('val', 7)
             .trigger('change');
-         //Checkbox
+         //Checkbox check
          cy.get('[type="checkbox"]').check();
          //Submit Form
          sent.btnSubmit().should('be.visible');
