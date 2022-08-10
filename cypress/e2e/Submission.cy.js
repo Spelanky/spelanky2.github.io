@@ -35,6 +35,7 @@ describe('Send submission', () => {
 
          // sent.Email().type(`${email}`);
          sent.Email().type(`${email}_${Random()}@test.com`);
+
          sent.Message().type(`${message}`);
 
          // Attach file
