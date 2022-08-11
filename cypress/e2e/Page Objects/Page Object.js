@@ -28,5 +28,16 @@ class Form {
       return cy.get("button[type='submit']");
    }
 }
+function Random() {
+   let text = '';
+   let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+   for (
+      var i = 0;
+      i < 1;
+      i++ //How many chars
+   )
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+   return text;
+}
 
-export default Form;
+export default { Form, Random };
