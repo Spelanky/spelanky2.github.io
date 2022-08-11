@@ -6,7 +6,7 @@ import Form from './Page Objects/Page Object.js';
 const base_url = 'https://spelanky.github.io/spelanky2.github.io/';
 const name = 'Mitka';
 const email = 'mymail';
-const message = 'Lorem Ipsum Message Text';
+const message = 'Message Text';
 const birthday = '1985-04-04';
 
 function Random() {
