@@ -1,5 +1,9 @@
+//! --- All-IN FORM --- main branch //
+
 /// <reference types="Cypress" />
+
 import Form from './Page Objects/Page Object.js';
+// import Random from './Page Objects/Page Object.js';
 
 //Set variables for test
 const base_url = 'https://spelanky.github.io/spelanky2.github.io/';
@@ -23,6 +27,7 @@ function Random() {
 describe('Send submission', () => {
    context('Submission', () => {
       const sent = new Form();
+      // const random = new Random();
 
       it('Sent Sumbission', () => {
          cy.visit(`${base_url}`);
@@ -55,7 +60,7 @@ describe('Send submission', () => {
          //Checkbox check
          cy.get('[type="checkbox"]').check();
          //Submit Form
-         sent.btnSubmit().should('be.visible').click();
+         sent.btnSubmit().should('be.visible');
       });
    });
 });
