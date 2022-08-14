@@ -48,15 +48,19 @@ describe('Send submission', () => {
 
          //Date field
          sent.Birthday().type(`${birthday}`);
+
          //Radio button check
          cy.get('[type="radio"]').first().should('have.value', 'PHP').check();
-         //Selector Favourite season
+
+         //Select Favourite season
          sent.Season().select('Summer');
+
          //Range setting
          cy.get('input[type="range"]')
             .as('range')
             .invoke('val', 7)
             .trigger('change');
+
          //Checkbox check
          cy.get('[type="checkbox"]').check();
          //Submit Form
