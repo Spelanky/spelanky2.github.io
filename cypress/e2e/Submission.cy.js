@@ -61,6 +61,7 @@ describe('Send submission', () => {
 
          //Checkbox check
          cy.get('[type="checkbox"]').check();
+
          //Submit Form
          sent.btnSubmit().should('be.visible');
       });
