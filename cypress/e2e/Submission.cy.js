@@ -1,5 +1,3 @@
-//! --- All-IN FORM --- main branch //
-
 /// <reference types="Cypress" />
 
 import Form from './Page Objects/Page Object.js';
