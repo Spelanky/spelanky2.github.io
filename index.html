@@ -16,8 +16,8 @@
          <label for="email">Email</label>
          <input type="email" id="email" name="email" />
 
-         <label for="message">Short Message</label>
-         <textarea id="s_message" class="message-id" name="message" required></textarea>
+         <label for="short_message">Short Message</label>
+         <textarea id="s_message" class="message-id" name="short_message" required></textarea>
 
          <!-- single file attachment handle -->
          <label for="file">Attach single file:</label>
@@ -28,7 +28,7 @@
          <input type="file" id="multiple_file" name="multiple_file[]" multiple />
 
          <!-- honeypot handle -->
-         <input id="honey" type="hidden" name="email_h" value="honey@m.com" />
+         <input id="honey" type="hidden" name="honeypot" value="honey@m.com" />
 
          <!-- date handle -->
          <label for="birthday">Birthday:</label>
@@ -57,16 +57,25 @@
          </div>
 
          <!-- range handle -->
-         <label for="vol">Rate us (between 1 and 10):</label>
+         <label for="rate">Rate us (between 1 and 10):</label>
          <input type="range" id="vol" name="rate" min="1" max="10" class="slider" />
 
          <!-- checkbox handle -->
          <div>
             <!-- <input type="hidden" name="subscribe" value="no" checked /> -->
-            <input type="checkbox" id="checkbox" name="subscribe" value="yes" />
-            <label for="subscribe">Subscribe</label><br />
+            <input type="checkbox" id="checkbox" name="checkbox" value="yes" />
+            <label for="checkbox">Checkbox</label><br />
          </div>
+         <div>
+            <span>Checkbox Group</span> <label for="checkbox_group+bfe0f64d-c096-4a78-ba0c-050ce3de2ecc">checkbox #1</label>
+            <input type="checkbox" id="checkbox_group+bfe0f64d-c096-4a78-ba0c-050ce3de2ecc" name="checkbox_group[]" value="checkbox #1" />
 
+            <label for="checkbox_group+e49c0bab-a8c8-49bf-8181-cd6e60920d37">checkbox #2</label>
+            <input type="checkbox" id="checkbox_group+e49c0bab-a8c8-49bf-8181-cd6e60920d37" name="checkbox_group[]" value="checkbox #2" />
+
+            <label for="checkbox_group+7571449a-4002-4033-b7ba-cf026abb8184">checkbox #3</label>
+            <input type="checkbox" id="checkbox_group+7571449a-4002-4033-b7ba-cf026abb8184" name="checkbox_group[]" value="checkbox #3" />
+         </div>
          <button type="submit">Send</button>
       </form>
    </body>
