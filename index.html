@@ -37,7 +37,7 @@
          <!-- radio button handle -->
          <div>
             <label>Favorite language</label><br />
-            <input type="radio" id="html" name="fav_language" value="PHP" />
+            <input type="radio" id="php" name="fav_language" value="PHP" />
             <label for="html">PHP</label><br />
             <input type="radio" id="css" name="fav_language" value="HTML/CSS" />
             <label for="css">HTML/CSS</label><br />
@@ -48,7 +48,7 @@
          <!-- select field handle -->
          <div>
             <label>Favorite season</label>
-            <select name="season">
+            <select name="season" id="selector">
                <option value="winter">Winter</option>
                <option value="summer">Summer</option>
                <option value="spring">Spring</option>
@@ -62,8 +62,8 @@
 
          <!-- checkbox handle -->
          <div>
-            <input type="hidden" name="subscribe" value="no" checked />
-            <input type="checkbox" name="subscribe" value="yes" />
+            <!-- <input type="hidden" name="subscribe" value="no" checked /> -->
+            <input type="checkbox" id="checkbox" name="subscribe" value="yes" />
             <label for="subscribe">Subscribe</label><br />
          </div>
 
