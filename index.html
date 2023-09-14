@@ -2,7 +2,7 @@
 <html>
    <head>
       <meta charset="UTF-8" />
-      <title>TEST Page</title>
+      <title>All-in Form</title>
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
@@ -10,21 +10,21 @@
       <div>
          <a target="_blank" href="https://headless.freihandlabor.dev/">Go to Headless Forms DEV -->></a>
       </div>
-      <form action="https://headless.freihandlabor.dev/api/v1/form-submission/N9lZ0jJ9G5" method="POST" enctype="multipart/form-data">
+      <form action="https://headless-api.freihandlabor.dev/api/v1/form/VV6SctrpUb" method="POST" enctype="multipart/form-data">
          <label for="name">Name</label>
          <input type="text" id="name" name="name" required />
          <label for="email">Email</label>
          <input type="email" id="email" name="email" />
 
-         <label for="message">Message</label>
-         <textarea id="message" class="message-id" name="message" required></textarea>
+         <label for="message">Short Message</label>
+         <textarea id="s_message" class="message-id" name="message" required></textarea>
 
          <!-- single file attachment handle -->
          <label for="attachment">Attach a file:</label>
          <input type="file" id="attachment" name="attachments" />
 
          <!-- multiple files attachment handle -->
-         <label for="attachment2">Attach multiple files111:</label>
+         <label for="attachment2">Attach multiple files:</label>
          <input type="file" id="attachment2" name="attachments[]" multiple />
 
          <!-- honeypot handle -->
