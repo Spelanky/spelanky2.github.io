@@ -20,12 +20,12 @@
          <textarea id="s_message" class="message-id" name="message" required></textarea>
 
          <!-- single file attachment handle -->
-         <label for="attachment">Attach a file:</label>
-         <input type="file" id="attachment" name="attachments" />
+         <label for="file">Attach single file:</label>
+         <input type="file" id="file" name="file[]" />
 
          <!-- multiple files attachment handle -->
-         <label for="attachment2">Attach multiple files:</label>
-         <input type="file" id="attachment2" name="attachments[]" multiple />
+         <label for="multiple_file">Attach multiple files:</label>
+         <input type="file" id="multiple_file" name="multiple_file[]" multiple />
 
          <!-- honeypot handle -->
          <input id="honey" type="hidden" name="email_h" value="honey@m.com" />
